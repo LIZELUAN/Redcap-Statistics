@@ -40,14 +40,6 @@ usr_num <- record_ids %>%
   summarise(`记录病人id数`=n())
 
 #####每个团队记录病人数######
-group_list <- c("nurse","pt","doctor","Promis")
-group_match <- str_c(group_list, collapse = "|")
-
-group_num <- record_ids %>%
-  mutate(Group=str_extract(`行为`, group_match)) %>%
-  group_by(Group, `行为`) %>% summarise() %>% ungroup() %>%
-  group_by(Group) %>%
-  summarise(`记录病人id数`=n())
 library(stringr)
 
 # for promis
