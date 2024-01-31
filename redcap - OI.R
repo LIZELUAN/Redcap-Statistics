@@ -21,14 +21,6 @@ da <- da %>%
 
 head(da)
 
-
-# x <- "a\\n\\\\"
-# writeLines(x)
-
-  
-# da$行为 <- gsub(" key4oi| baseline| admin|删除文件 |上传文件 |1st |2nd |3rd |4th |5th ", "", da$行为)
-
-
 record_ids <- da %>%
   group_by(用户名,行为) %>%
   summarise() %>%
