@@ -8,7 +8,11 @@ This is a R script utilizing the logging file of the database to obtain:
 The output file is an xlsx file containing the statistical information.
 
 How to use:   
-Please run the below command to activate the environment:
-```
-conda env create -f redcap_analysis.yaml   
-```
+1. Set the environment:      
+   ```   
+   conda env create -f redcap_analysis.yaml
+   ```     
+2. Run the analysis     
+   ```
+   ./Rscript [logging_file] [year-month]
+   ```
