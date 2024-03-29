@@ -14,5 +14,5 @@ How to use:
    ```
    ./redcap_OI.R [logging_file] [year-month]
    ```
-3. Output
+3. Output          
    The output file is an xlsx file containing the statistical information.
