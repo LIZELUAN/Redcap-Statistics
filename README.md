@@ -4,8 +4,6 @@ This is a R script utilizing the logging file of the database to obtain:
   2. the number of patient ids recorded by each user  
   3. the number of patient ids recorded by each group  
   4. the number of patient id (as well as patient name) recorded by each doctor.  
-         
-The output file is an xlsx file containing the statistical information.
 
 How to use:   
 1. Set the environment:      
@@ -16,3 +14,5 @@ How to use:
    ```
    ./redcap_OI.R [logging_file] [year-month]
    ```
+3. Output
+   The output file is an xlsx file containing the statistical information.
