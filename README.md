@@ -14,5 +14,5 @@ How to use:
    ```     
 2. Run the analysis     
    ```
-   ./Rscript [logging_file] [year-month]
+   ./redcap_OI.R [logging_file] [year-month]
    ```
