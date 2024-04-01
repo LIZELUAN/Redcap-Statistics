@@ -9,6 +9,7 @@ How to use:
 1. Set the environment:      
    ```   
    conda env create -f redcap_analysis.yaml
+   conda activate redcap_statistics
    ```     
 2. Run the analysis     
    ```
