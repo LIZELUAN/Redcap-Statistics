@@ -13,6 +13,7 @@ How to use:
 2. Run the analysis     
    ```
    ./redcap_OI.R [logging_file] [year-month]
+   ./redcap_SD.R [logging_file] [year-month]
    ```
 3. Output          
    The output file is an xlsx file containing the statistical information.
