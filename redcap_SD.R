@@ -21,17 +21,19 @@ message(paste0("Now start statistical analysis on ",month," of ",logfile_name))
 library(tidyverse)
 library(openxlsx)
 
-matchlist <- " key4oi| baseline| admin|上传文件 |删除文件 |1st |2nd |3rd |\\dth "
+matchlist <- " key4oi| baseline| admin|上传文件 |1st |2nd |3rd |\\dth |创建的|更新的| \\(Auto calculation\\) "
 da <- read.csv(logfile_name, encoding="UTF-8", check.names = F)       
 colnames(da)[1] <- "时间.日期"
 colnames(da)[4] <- "数据变更清单.或导出的字段"
-da <- da %>% 
-  filter(str_detect(`时间.日期`,month)) %>%          
+da <- da %>%
+  filter(str_detect(`时间.日期`,month)) %>%     
   filter(!(`用户名` %in% c("liujw9") | `行为` %in% c("管理/设计 ","数据导出 ","编辑角色 "))) %>%
   mutate(`行为` = str_replace_all(`行为`, matchlist, "")) %>%
-  mutate(`行为` = str_replace_all(`行为`, "创建的|更新的", ""))
+  filter(!(str_detect(`行为`,"(^删除文件 记录 (\\d+)$)|(^Download uploaded document 记录 (\\d+)$)"))) %>%
+  mutate(`数据变更清单.或导出的字段` = str_replace(`数据变更清单.或导出的字段`, "^(\\[)instance = (\\d+)(\\])(, )?", "")) %>%
+  filter(!(str_detect(`数据变更清单.或导出的字段`,"(^$)|(^basic_informationnurse_complete = '\\d'$)|(^admin_informationnurse_complete = '\\d'$)")))
 
-# head(da)
+# view(da)
 
 record_ids <- da %>%
   group_by(用户名,行为) %>%
@@ -138,4 +140,7 @@ sumtable <- rbind(sumtable,B)
 list_of_sheets <- list("record_ids" = record_ids, "usr_num" = usr_num, "group_num" = group_num, "each_doctor"=sumtable)
 new_list <- c(list_of_sheets, check)
 write.xlsx(new_list, file = output_file_name,rowNames=F)    ##### !!! 修改输出的文件名
+
+message(paste0("Analysis finished. Output file: ",output_file_name))
+
 
