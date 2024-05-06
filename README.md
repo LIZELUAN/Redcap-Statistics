@@ -5,7 +5,7 @@ This is a R script utilizing the logging file of the database to obtain:
   3. the number of patient ids recorded by each group  
   4. the number of patient id (as well as patient name) recorded by each doctor.  
 
-# How to use:   
+## How to use:   
  __*1. Set the environment*__:      
    ```   
    conda env create -f redcap_analysis.yaml
@@ -22,5 +22,5 @@ This is a R script utilizing the logging file of the database to obtain:
  __*3. Output*__         
    The output file is an xlsx file containing the statistical information.
 
-# Others     
+## Others     
 The raw R script for analysis can been seen in the directory `redcap_before`.             
