@@ -1,4 +1,4 @@
-name: redcap_statistics
+name: base
 channels:
   - conda-forge
   - r
