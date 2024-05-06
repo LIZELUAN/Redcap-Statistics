@@ -21,7 +21,8 @@ This is a R script utilizing the logging file of the database to obtain:
    ```
    ./redcap_SD.R [logging_file] [year-month]     
    ```
-           
+
+                                    
    The example can be seen in the file  `run.sh`.
                                                              
  __*3. Output*__         
