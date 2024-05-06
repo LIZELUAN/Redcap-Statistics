@@ -17,7 +17,7 @@ How to use:
    ./redcap_OI.R [logging_file] [year-month]
    ./redcap_SD.R [logging_file] [year-month]     
    ```
-   The example can be seen in the file run.sh.
+   The example can be seen in the file  `run.sh`.
                                                              
  __*3. Output*__         
    The output file is an xlsx file containing the statistical information.
