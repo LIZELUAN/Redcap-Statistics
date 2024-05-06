@@ -7,10 +7,10 @@ This is a R script utilizing the logging file of the database to obtain:
 
 ## How to use:   
  __*1. Set the environment in the Linux*__      
-     ```                 
-     conda env create -f redcap_analysis.yaml                
-     conda activate redcap_statistics                  
-     ```
+   ```                 
+   conda env create -f redcap_analysis.yaml                                   
+   conda activate redcap_statistics                        
+   ```                      
                                           
  __*2. Run the analysis*__    
    For Redcap OI statistics:
