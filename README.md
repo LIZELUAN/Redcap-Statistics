@@ -6,7 +6,7 @@ This is a R script utilizing the logging file of the database to obtain:
   4. the number of patient id (as well as patient name) recorded by each doctor.  
 
 ## How to use:   
- __*1. Set the environment*__:      
+ __*1. Set the environment in the Linux*__:      
    ```   
    conda env create -f redcap_analysis.yaml
    conda activate redcap_statistics
