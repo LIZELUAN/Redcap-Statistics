@@ -13,13 +13,16 @@ This is a R script utilizing the logging file of the database to obtain:
    ```
                                           
  __*2. Run the analysis*__    
+   ### For Redcap OI
    ```
-   # For Redcap OI 
    ./redcap_OI.R [logging_file] [year-month]
+   ```
           
-   # For Redcap SD
+   ### For Redcap SD
+   ```
    ./redcap_SD.R [logging_file] [year-month]     
    ```
+           
    The example can be seen in the file  `run.sh`.
                                                              
  __*3. Output*__         
